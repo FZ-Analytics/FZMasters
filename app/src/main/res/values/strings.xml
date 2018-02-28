@@ -1,0 +1,12 @@
+<resources>
+	<string name="app_name">FZMasters</string>
+
+	<string name="TitleDataMill">Mill</string>
+	<string name="TitleDataEstate">Estate</string>
+	<string name="TitleDataDivisi">Divisi</string>
+	<string name="TitleDataTransport">Unit Transport</string>
+	<string name="TitleDataVehicle">Kendaraan</string>
+	<string name="TitleDataBlock">Block</string>
+	<string name="TitleDataUser">User</string>
+	<string name="TitleDataSetting">Setting</string>
+</resources>
