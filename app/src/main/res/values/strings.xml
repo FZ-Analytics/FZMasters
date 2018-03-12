@@ -1,6 +1,10 @@
 <resources>
 	<string name="app_name">FZMasters</string>
 
+	<string name="HintPembuat">@2018 By Ignat</string>
+
+	<string name="TitleDataKebun">Perkebunan</string>
+	<string name="TitleDataRegion">Region</string>
 	<string name="TitleDataMill">Mill</string>
 	<string name="TitleDataEstate">Estate</string>
 	<string name="TitleDataDivisi">Divisi</string>

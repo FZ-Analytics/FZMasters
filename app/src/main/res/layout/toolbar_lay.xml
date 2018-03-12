@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		tools:context="com.sinarmas_agribusiness.fzmasters.common.Menu_act"
+		style="@style/DefaultActivity">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@android:color/darker_gray">
+
+		<ImageView
+			android:id="@+id/ivKembali"
+			android:layout_width="40dp"
+			android:layout_height="40dp"
+			android:layout_centerVertical="true"
+			android:adjustViewBounds="true"
+			android:scaleType="fitXY"
+      android:padding="3dp"
+			app:srcCompat="@drawable/ic_arrow_left_40dp"
+			tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
+      android:id="@+id/ivRubah"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_alignParentTop="true"
+      android:layout_toStartOf="@+id/ivHapus"
+      android:adjustViewBounds="true"
+      android:padding="3dp"
+      android:scaleType="fitXY"
+      app:srcCompat="@drawable/ic_edit_24dp"
+      tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
+      android:id="@+id/ivHapus"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_alignParentTop="true"
+      android:layout_toStartOf="@+id/ivTambah"
+      android:adjustViewBounds="true"
+      android:padding="3dp"
+      android:scaleType="fitXY"
+      app:srcCompat="@drawable/ic_cut_40dp"
+      tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
+      android:id="@+id/ivTambah"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_alignParentTop="true"
+      android:layout_toStartOf="@+id/ivRefresh"
+      android:adjustViewBounds="true"
+      android:padding="3dp"
+      android:scaleType="fitXY"
+      app:srcCompat="@drawable/ic_add_40dp"
+      tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
+      android:id="@+id/ivRefresh"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_alignParentEnd="true"
+      android:layout_alignParentTop="true"
+      android:adjustViewBounds="true"
+      android:padding="3dp"
+      android:scaleType="fitXY"
+      app:srcCompat="@drawable/ic_refresh_40dp"
+      tools:ignore="VectorDrawableCompat" />
+	</RelativeLayout>
+</RelativeLayout>

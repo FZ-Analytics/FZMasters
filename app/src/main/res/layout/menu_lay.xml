@@ -5,362 +5,465 @@
 		xmlns:tools="http://schemas.android.com/tools"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
-		tools:context="com.sinarmas_agribusiness.fzmasters.Menu_act"
+		tools:context="com.sinarmas_agribusiness.fzmasters.common.Menu_act"
 		style="@style/DefaultActivity">
 
 	<RelativeLayout
-			android:id="@+id/rlAll"
-			android:layout_width="match_parent"
-			android:layout_height="match_parent"
-			android:layout_alignParentLeft="true"
-			android:layout_alignParentStart="true"
-			android:layout_marginTop="20dp"
-			android:layout_marginBottom="25dp">
+		android:layout_width="match_parent"
+		android:layout_height="82dp"
+		android:id="@+id/rlHeader"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentLeft="true"
+		android:layout_marginTop="5dp"
+		android:layout_marginBottom="7dp"
+		android:layout_alignParentStart="true">
+		<include layout="@layout/header_lay"/>
+	</RelativeLayout>
 
-		<ImageView
-				android:id="@+id/ivTitleLogin"
-				android:background="@drawable/ffbtoplogo"
-				android:scaleType="fitCenter"
-				android:layout_height="85dp"
-				android:layout_width="match_parent"
-				android:layout_alignParentTop="true"
-				android:layout_marginLeft="30dp"
-				android:layout_marginRight="30dp"
-				android:layout_centerHorizontal="true"/>
+	<RelativeLayout
+		android:id="@+id/rlAll"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_above="@id/rlFooter"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentStart="true"
+		android:layout_below="@id/rlHeader">
 
 		<ScrollView
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:layout_below="@id/ivTitleLogin"
 			android:layout_alignParentLeft="true"
-			android:layout_marginTop="20dp"
 			android:layout_alignParentStart="true">
 
 			<LinearLayout
-				android:orientation="vertical"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
+				android:layout_below="@+id/rlAll"
 				android:gravity="center"
-				android:layout_below="@+id/rlAll">
+				android:orientation="vertical">
 
 				<LinearLayout
 					android:id="@+id/llGroup1"
-					android:orientation="horizontal"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
-					android:gravity="center"
 					android:layout_alignParentLeft="true"
-					android:layout_alignParentStart="true">
+					android:layout_alignParentStart="true"
+					android:gravity="center"
+					android:orientation="horizontal">
 
 					<RelativeLayout
+						android:id="@+id/rlKebun"
 						style="@style/MenuButton"
-						android:orientation="vertical"
 						android:layout_width="@dimen/HeightButtonTimbangan"
 						android:layout_height="@dimen/HeightButtonTimbangan2"
-						android:weightSum="1"
-						android:id="@+id/rlMill"
-						android:gravity="center">
-
-						<ImageView
-							android:scaleType="fitXY"
-							android:adjustViewBounds="true"
-							app:srcCompat="@drawable/mill"
-							android:id="@+id/ivMill"
-							android:layout_centerVertical="true"
-							android:layout_centerHorizontal="true"
-							android:layout_width="56dp"
-							android:layout_height="56dp"/>
-
-						<TextView
-							style="@style/TextButton"
-							android:layout_width="match_parent"
-							android:layout_height="wrap_content"
-							android:id="@+id/tvMill"
-							android:text="@string/TitleDataMill"
-							android:gravity="center"
-							android:layout_below="@id/ivMill"
-							android:textAlignment="center"
-							android:layout_marginTop="8dp"/>
-					</RelativeLayout>
-
-					<RelativeLayout
-						style="@style/MenuButton"
-						android:orientation="vertical"
-						android:layout_width="@dimen/HeightButtonTimbangan"
-						android:layout_height="@dimen/HeightButtonTimbangan2"
-						android:weightSum="1"
-						android:id="@+id/rlEstate"
 						android:gravity="center"
-						android:layout_marginLeft="16dp"
-						android:layout_marginRight="16dp">
+						android:weightSum="1">
 
 						<ImageView
-							android:scaleType="fitXY"
-							android:adjustViewBounds="true"
-							app:srcCompat="@drawable/estate"
-							android:id="@+id/ivEstate"
-							android:layout_centerVertical="true"
-							android:layout_centerHorizontal="true"
+							android:id="@+id/ivKebun"
 							android:layout_width="56dp"
-							android:layout_height="56dp"/>
+							android:layout_height="56dp"
+							android:layout_centerHorizontal="true"
+							android:layout_centerVertical="true"
+							android:adjustViewBounds="true"
+							android:scaleType="fitXY"
+							app:srcCompat="@drawable/perkebunan" />
 
 						<TextView
+							android:id="@+id/tvKebun"
 							style="@style/TextButton"
 							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
-							android:id="@+id/tvEstate"
-							android:text="@string/TitleDataEstate"
+							android:layout_below="@id/ivKebun"
+							android:layout_marginTop="8dp"
 							android:gravity="center"
-							android:layout_below="@id/ivEstate"
-							android:textAlignment="center"
-							android:layout_marginTop="8dp"/>
+							android:text="@string/TitleDataKebun"
+							android:textAlignment="center" />
 					</RelativeLayout>
 
 					<RelativeLayout
+						android:id="@+id/rlRegion"
 						style="@style/MenuButton"
-						android:orientation="vertical"
 						android:layout_width="@dimen/HeightButtonTimbangan"
 						android:layout_height="@dimen/HeightButtonTimbangan2"
-						android:weightSum="1"
-						android:id="@+id/rlDivisi"
-						android:gravity="center">
+						android:layout_marginLeft="16dp"
+						android:layout_marginRight="16dp"
+						android:gravity="center"
+						android:weightSum="1">
 
 						<ImageView
-							android:scaleType="fitXY"
-							android:adjustViewBounds="true"
-							app:srcCompat="@drawable/divisi"
-							android:id="@+id/ivDivisi"
-							android:layout_centerVertical="true"
-							android:layout_centerHorizontal="true"
+							android:id="@+id/ivRegion"
 							android:layout_width="56dp"
-							android:layout_height="56dp"/>
+							android:layout_height="56dp"
+							android:layout_centerHorizontal="true"
+							android:layout_centerVertical="true"
+							android:adjustViewBounds="true"
+							android:scaleType="fitXY"
+							app:srcCompat="@drawable/region" />
 
 						<TextView
+							android:id="@+id/tvRegion"
 							style="@style/TextButton"
 							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
-							android:id="@+id/tvDivisi"
-							android:text="@string/TitleDataDivisi"
+							android:layout_below="@id/ivRegion"
+							android:layout_marginTop="8dp"
 							android:gravity="center"
-							android:layout_below="@id/ivDivisi"
-							android:textAlignment="center"
-							android:layout_marginTop="8dp"/>
+							android:text="@string/TitleDataRegion"
+							android:textAlignment="center" />
+					</RelativeLayout>
+
+					<RelativeLayout
+						android:id="@+id/rlMill"
+						style="@style/MenuButton"
+						android:layout_width="@dimen/HeightButtonTimbangan"
+						android:layout_height="@dimen/HeightButtonTimbangan2"
+						android:gravity="center"
+						android:weightSum="1">
+
+						<ImageView
+							android:id="@+id/ivMill"
+							android:layout_width="56dp"
+							android:layout_height="56dp"
+							android:layout_centerHorizontal="true"
+							android:layout_centerVertical="true"
+							android:adjustViewBounds="true"
+							android:scaleType="fitXY"
+							app:srcCompat="@drawable/mill" />
+
+						<TextView
+							android:id="@+id/tvMill"
+							style="@style/TextButton"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_below="@id/ivMill"
+							android:layout_marginTop="8dp"
+							android:gravity="center"
+							android:text="@string/TitleDataMill"
+							android:textAlignment="center" />
 					</RelativeLayout>
 				</LinearLayout>
 
 				<LinearLayout
 					android:id="@+id/llGroup2"
-					android:orientation="horizontal"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
-					android:gravity="center"
 					android:layout_alignParentLeft="true"
-					android:layout_alignParentStart="true">
+					android:layout_alignParentStart="true"
+					android:gravity="center"
+					android:orientation="horizontal">
 
 					<RelativeLayout
+						android:id="@+id/rlEstate"
 						style="@style/MenuButton"
-						android:orientation="vertical"
 						android:layout_width="@dimen/HeightButtonTimbangan"
 						android:layout_height="@dimen/HeightButtonTimbangan2"
-						android:weightSum="1"
-						android:id="@+id/rlPool"
-						android:gravity="center">
-
-						<ImageView
-							android:scaleType="fitXY"
-							android:adjustViewBounds="true"
-							app:srcCompat="@drawable/transport"
-							android:id="@+id/ivPool"
-							android:layout_centerVertical="true"
-							android:layout_centerHorizontal="true"
-							android:layout_width="56dp"
-							android:layout_height="56dp"/>
-
-						<TextView
-							style="@style/TextButton"
-							android:layout_width="match_parent"
-							android:layout_height="wrap_content"
-							android:id="@+id/tvPool"
-							android:text="@string/TitleDataTransport"
-							android:gravity="center"
-							android:layout_below="@id/ivPool"
-							android:textAlignment="center"
-							android:layout_marginTop="8dp"/>
-					</RelativeLayout>
-
-					<RelativeLayout
-						style="@style/MenuButton"
-						android:orientation="vertical"
-						android:layout_width="@dimen/HeightButtonTimbangan"
-						android:layout_height="@dimen/HeightButtonTimbangan2"
-						android:weightSum="1"
-						android:id="@+id/rlVehicle"
 						android:gravity="center"
-						android:layout_marginLeft="16dp"
-						android:layout_marginRight="16dp">
+						android:weightSum="1">
 
 						<ImageView
-							android:scaleType="fitXY"
-							android:adjustViewBounds="true"
-							app:srcCompat="@drawable/kendaraan"
-							android:id="@+id/ivVehicle"
-							android:layout_centerVertical="true"
-							android:layout_centerHorizontal="true"
+							android:id="@+id/ivEstate"
 							android:layout_width="56dp"
-							android:layout_height="56dp"/>
+							android:layout_height="56dp"
+							android:layout_centerHorizontal="true"
+							android:layout_centerVertical="true"
+							android:adjustViewBounds="true"
+							android:scaleType="fitXY"
+							app:srcCompat="@drawable/estate" />
 
 						<TextView
+							android:id="@+id/tvEstate"
 							style="@style/TextButton"
 							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
-							android:id="@+id/tvVehicle"
-							android:text="@string/TitleDataVehicle"
+							android:layout_below="@id/ivEstate"
+							android:layout_marginTop="8dp"
 							android:gravity="center"
-							android:layout_below="@id/ivVehicle"
-							android:textAlignment="center"
-							android:layout_marginTop="8dp"/>
+							android:text="@string/TitleDataEstate"
+							android:textAlignment="center" />
 					</RelativeLayout>
 
 					<RelativeLayout
+						android:id="@+id/rlDivisi"
 						style="@style/MenuButton"
-						android:orientation="vertical"
 						android:layout_width="@dimen/HeightButtonTimbangan"
 						android:layout_height="@dimen/HeightButtonTimbangan2"
-						android:weightSum="1"
-						android:id="@+id/rlBlock"
-						android:gravity="center">
+						android:layout_marginLeft="16dp"
+						android:layout_marginRight="16dp"
+						android:gravity="center"
+						android:weightSum="1">
 
 						<ImageView
-							android:scaleType="fitXY"
-							android:adjustViewBounds="true"
-							app:srcCompat="@drawable/block"
-							android:id="@+id/ivBlock"
-							android:layout_centerVertical="true"
-							android:layout_centerHorizontal="true"
+							android:id="@+id/ivDivisi"
 							android:layout_width="56dp"
-							android:layout_height="56dp"/>
+							android:layout_height="56dp"
+							android:layout_centerHorizontal="true"
+							android:layout_centerVertical="true"
+							android:adjustViewBounds="true"
+							android:scaleType="fitXY"
+							app:srcCompat="@drawable/divisi" />
 
 						<TextView
+							android:id="@+id/tvDivisi"
 							style="@style/TextButton"
 							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
-							android:id="@+id/tvBlock"
-							android:text="@string/TitleDataBlock"
+							android:layout_below="@id/ivDivisi"
+							android:layout_marginTop="8dp"
 							android:gravity="center"
-							android:layout_below="@id/ivBlock"
-							android:textAlignment="center"
-							android:layout_marginTop="8dp"/>
+							android:text="@string/TitleDataDivisi"
+							android:textAlignment="center" />
+					</RelativeLayout>
+
+					<RelativeLayout
+						android:id="@+id/rlPool"
+						style="@style/MenuButton"
+						android:layout_width="@dimen/HeightButtonTimbangan"
+						android:layout_height="@dimen/HeightButtonTimbangan2"
+						android:gravity="center"
+						android:weightSum="1">
+
+						<ImageView
+							android:id="@+id/ivPool"
+							android:layout_width="56dp"
+							android:layout_height="56dp"
+							android:layout_centerHorizontal="true"
+							android:layout_centerVertical="true"
+							android:adjustViewBounds="true"
+							android:scaleType="fitXY"
+							app:srcCompat="@drawable/transport" />
+
+						<TextView
+							android:id="@+id/tvPool"
+							style="@style/TextButton"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_below="@id/ivPool"
+							android:layout_marginTop="8dp"
+							android:gravity="center"
+							android:text="@string/TitleDataTransport"
+							android:textAlignment="center" />
 					</RelativeLayout>
 				</LinearLayout>
 
 				<LinearLayout
 					android:id="@+id/llGroup3"
-					android:orientation="horizontal"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
-					android:gravity="center"
 					android:layout_alignParentLeft="true"
-					android:layout_alignParentStart="true">
+					android:layout_alignParentStart="true"
+					android:gravity="center"
+					android:orientation="horizontal">
 
 					<RelativeLayout
+						android:id="@+id/rlVehicle"
 						style="@style/MenuButton"
-						android:orientation="vertical"
 						android:layout_width="@dimen/HeightButtonTimbangan"
 						android:layout_height="@dimen/HeightButtonTimbangan2"
-						android:weightSum="1"
-						android:id="@+id/rlUser"
-						android:gravity="center">
-
-						<ImageView
-							android:scaleType="fitXY"
-							android:adjustViewBounds="true"
-							app:srcCompat="@drawable/user"
-							android:id="@+id/ivUser"
-							android:layout_centerVertical="true"
-							android:layout_centerHorizontal="true"
-							android:layout_width="56dp"
-							android:layout_height="56dp"/>
-
-						<TextView
-							style="@style/TextButton"
-							android:layout_width="match_parent"
-							android:layout_height="wrap_content"
-							android:id="@+id/tvUser"
-							android:text="@string/TitleDataUser"
-							android:gravity="center"
-							android:layout_below="@id/ivUser"
-							android:textAlignment="center"
-							android:layout_marginTop="8dp"/>
-					</RelativeLayout>
-
-					<RelativeLayout
-						style="@style/MenuButton"
-						android:orientation="vertical"
-						android:layout_width="@dimen/HeightButtonTimbangan"
-						android:layout_height="@dimen/HeightButtonTimbangan2"
-						android:weightSum="1"
-						android:id="@+id/rlSetting"
 						android:gravity="center"
-						android:layout_marginLeft="16dp"
-						android:layout_marginRight="16dp">
+						android:weightSum="1">
 
 						<ImageView
-							android:scaleType="fitXY"
-							android:adjustViewBounds="true"
-							app:srcCompat="@drawable/setting"
-							android:id="@+id/ivSetting"
-							android:layout_centerVertical="true"
-							android:layout_centerHorizontal="true"
-							android:layout_width="56dp"
-							android:layout_height="56dp"/>
-
-						<TextView
-							style="@style/TextButton"
-							android:layout_width="match_parent"
-							android:layout_height="wrap_content"
-							android:id="@+id/tvSetting"
-							android:text="@string/TitleDataSetting"
-							android:gravity="center"
-							android:layout_below="@id/ivSetting"
-							android:textAlignment="center"
-							android:layout_marginTop="8dp"/>
-					</RelativeLayout>
-
-					<RelativeLayout
-						style="@style/MenuButton"
-						android:orientation="vertical"
-						android:layout_width="@dimen/HeightButtonTimbangan"
-						android:layout_height="@dimen/HeightButtonTimbangan2"
-						android:weightSum="1"
-						android:id="@+id/rlUserx"
-						android:gravity="center">
-
-						<ImageView
-							android:scaleType="fitXY"
-							android:adjustViewBounds="true"
-							app:srcCompat="@drawable/user"
-							android:id="@+id/ivUserx"
-							android:layout_centerVertical="true"
-							android:layout_centerHorizontal="true"
+							android:id="@+id/ivVehicle"
 							android:layout_width="56dp"
 							android:layout_height="56dp"
-							android:visibility="gone"/>
+							android:layout_centerHorizontal="true"
+							android:layout_centerVertical="true"
+							android:adjustViewBounds="true"
+							android:scaleType="fitXY"
+							app:srcCompat="@drawable/kendaraan" />
 
 						<TextView
+							android:id="@+id/tvVehicle"
 							style="@style/TextButton"
 							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
-							android:id="@+id/tvUserx"
-							android:text="@string/TitleDataUser"
-							android:gravity="center"
-							android:layout_below="@id/ivUserx"
-							android:textAlignment="center"
+							android:layout_below="@id/ivVehicle"
 							android:layout_marginTop="8dp"
-							android:visibility="gone"/>
+							android:gravity="center"
+							android:text="@string/TitleDataVehicle"
+							android:textAlignment="center" />
+					</RelativeLayout>
+
+					<RelativeLayout
+						android:id="@+id/rlBlock"
+						style="@style/MenuButton"
+						android:layout_width="@dimen/HeightButtonTimbangan"
+						android:layout_height="@dimen/HeightButtonTimbangan2"
+						android:layout_marginLeft="16dp"
+						android:layout_marginRight="16dp"
+						android:gravity="center"
+						android:weightSum="1">
+
+						<ImageView
+							android:id="@+id/ivBlock"
+							android:layout_width="56dp"
+							android:layout_height="56dp"
+							android:layout_centerHorizontal="true"
+							android:layout_centerVertical="true"
+							android:adjustViewBounds="true"
+							android:scaleType="fitXY"
+							app:srcCompat="@drawable/block" />
+
+						<TextView
+							android:id="@+id/tvBlock"
+							style="@style/TextButton"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_below="@id/ivBlock"
+							android:layout_marginTop="8dp"
+							android:gravity="center"
+							android:text="@string/TitleDataBlock"
+							android:textAlignment="center" />
+					</RelativeLayout>
+
+					<RelativeLayout
+						android:id="@+id/rlUser"
+						style="@style/MenuButton"
+						android:layout_width="@dimen/HeightButtonTimbangan"
+						android:layout_height="@dimen/HeightButtonTimbangan2"
+						android:gravity="center"
+						android:weightSum="1">
+
+						<ImageView
+							android:id="@+id/ivUser"
+							android:layout_width="56dp"
+							android:layout_height="56dp"
+							android:layout_centerHorizontal="true"
+							android:layout_centerVertical="true"
+							android:adjustViewBounds="true"
+							android:scaleType="fitXY"
+							app:srcCompat="@drawable/user" />
+
+						<TextView
+							android:id="@+id/tvUser"
+							style="@style/TextButton"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_below="@id/ivUser"
+							android:layout_marginTop="8dp"
+							android:gravity="center"
+							android:text="@string/TitleDataUser"
+							android:textAlignment="center" />
+					</RelativeLayout>
+				</LinearLayout>
+
+				<LinearLayout
+					android:id="@+id/llGroup4"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_alignParentLeft="true"
+					android:layout_alignParentStart="true"
+					android:gravity="center"
+					android:orientation="horizontal">
+
+					<RelativeLayout
+						android:id="@+id/rlSetting"
+						style="@style/MenuButton"
+						android:layout_width="@dimen/HeightButtonTimbangan"
+						android:layout_height="@dimen/HeightButtonTimbangan2"
+						android:gravity="center"
+						android:weightSum="1">
+
+						<ImageView
+							android:id="@+id/ivSetting"
+							android:layout_width="56dp"
+							android:layout_height="56dp"
+							android:layout_centerHorizontal="true"
+							android:layout_centerVertical="true"
+							android:adjustViewBounds="true"
+							android:scaleType="fitXY"
+							app:srcCompat="@drawable/setting" />
+
+						<TextView
+							android:id="@+id/tvSetting"
+							style="@style/TextButton"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_below="@id/ivSetting"
+							android:layout_marginTop="8dp"
+							android:gravity="center"
+							android:text="@string/TitleDataSetting"
+							android:textAlignment="center" />
+					</RelativeLayout>
+
+					<RelativeLayout
+						android:id="@+id/rlUser2"
+						style="@style/MenuButton"
+						android:layout_width="@dimen/HeightButtonTimbangan"
+						android:layout_height="@dimen/HeightButtonTimbangan2"
+						android:layout_marginLeft="16dp"
+						android:layout_marginRight="16dp"
+						android:gravity="center"
+						android:visibility="invisible"
+						android:weightSum="1">
+
+						<ImageView
+							android:id="@+id/ivUser2"
+							android:layout_width="56dp"
+							android:layout_height="56dp"
+							android:layout_centerHorizontal="true"
+							android:layout_centerVertical="true"
+							android:adjustViewBounds="true"
+							android:scaleType="fitXY"
+							app:srcCompat="@drawable/user" />
+
+						<TextView
+							android:id="@+id/tvUser2"
+							style="@style/TextButton"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_below="@id/ivUser2"
+							android:layout_marginTop="8dp"
+							android:gravity="center"
+							android:text="@string/TitleDataUser"
+							android:textAlignment="center" />
+					</RelativeLayout>
+
+					<RelativeLayout
+						android:id="@+id/rlSetting2"
+						style="@style/MenuButton"
+						android:layout_width="@dimen/HeightButtonTimbangan"
+						android:layout_height="@dimen/HeightButtonTimbangan2"
+						android:gravity="center"
+						android:visibility="invisible"
+						android:weightSum="1">
+
+						<ImageView
+							android:id="@+id/ivSetting2"
+							android:layout_width="56dp"
+							android:layout_height="56dp"
+							android:layout_centerHorizontal="true"
+							android:layout_centerVertical="true"
+							android:adjustViewBounds="true"
+							android:scaleType="fitXY"
+							app:srcCompat="@drawable/setting" />
+
+						<TextView
+							android:id="@+id/tvSetting2"
+							style="@style/TextButton"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_below="@id/ivSetting2"
+							android:layout_marginTop="8dp"
+							android:gravity="center"
+							android:text="@string/TitleDataSetting"
+							android:textAlignment="center" />
 					</RelativeLayout>
 				</LinearLayout>
 			</LinearLayout>
 		</ScrollView>
+	</RelativeLayout>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/rlFooter"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentLeft="true"
+		android:layout_marginTop="7dp"
+		android:layout_alignParentStart="true">
+		<include layout="@layout/footer_lay"/>
 	</RelativeLayout>
 
 </RelativeLayout>
